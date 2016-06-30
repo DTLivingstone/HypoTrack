@@ -54,14 +54,54 @@
 		630D601D1D25B7AE0009D2BC /* HypoTrack */ = {
 			isa = PBXGroup;
 			children = (
-				630D601E1D25B7AE0009D2BC /* AppDelegate.swift */,
-				630D60201D25B7AE0009D2BC /* ViewController.swift */,
-				630D60221D25B7AE0009D2BC /* Main.storyboard */,
-				630D60251D25B7AE0009D2BC /* Assets.xcassets */,
-				630D60271D25B7AE0009D2BC /* LaunchScreen.storyboard */,
-				630D602A1D25B7AE0009D2BC /* Info.plist */,
+				635CAD731D25C83A003ABCA5 /* App Global */,
+				635CAD6F1D25C6FD003ABCA5 /* Model */,
+				635CAD701D25C712003ABCA5 /* View */,
+				635CAD711D25C725003ABCA5 /* Controller */,
+				635CAD721D25C746003ABCA5 /* Utility */,
 			);
 			path = HypoTrack;
+			sourceTree = "<group>";
+		};
+		635CAD6F1D25C6FD003ABCA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		635CAD701D25C712003ABCA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				630D60251D25B7AE0009D2BC /* Assets.xcassets */,
+				630D60271D25B7AE0009D2BC /* LaunchScreen.storyboard */,
+				630D60221D25B7AE0009D2BC /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		635CAD711D25C725003ABCA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				630D60201D25B7AE0009D2BC /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		635CAD721D25C746003ABCA5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		635CAD731D25C83A003ABCA5 /* App Global */ = {
+			isa = PBXGroup;
+			children = (
+				630D601E1D25B7AE0009D2BC /* AppDelegate.swift */,
+				630D602A1D25B7AE0009D2BC /* Info.plist */,
+			);
+			name = "App Global";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +328,7 @@
 				630D602F1D25B7AE0009D2BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
