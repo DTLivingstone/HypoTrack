@@ -8,11 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Setup {
 
+    func setupAppearance() {
+        
+    }
+    
+    func setup() {
+        self.navigationItem.title = "HypoTrack"
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupAppearance()
+        setup()
     }
 
     override func didReceiveMemoryWarning() {

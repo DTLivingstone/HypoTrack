@@ -12,6 +12,11 @@
 		630D60241D25B7AE0009D2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630D60221D25B7AE0009D2BC /* Main.storyboard */; };
 		630D60261D25B7AE0009D2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630D60251D25B7AE0009D2BC /* Assets.xcassets */; };
 		630D60291D25B7AE0009D2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630D60271D25B7AE0009D2BC /* LaunchScreen.storyboard */; };
+		6347A9D21D26C3D600CEAA5C /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D11D26C3D600CEAA5C /* Medication.swift */; };
+		6347A9D41D26CA8700CEAA5C /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D31D26CA8700CEAA5C /* Injection.swift */; };
+		6347A9D61D26D05400CEAA5C /* medButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D51D26D05400CEAA5C /* medButton.swift */; };
+		6347A9D81D26EFEB00CEAA5C /* MedicationDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D71D26EFEB00CEAA5C /* MedicationDictionary.swift */; };
+		6347A9DA1D26F4E900CEAA5C /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D91D26F4E900CEAA5C /* Setup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		630D60251D25B7AE0009D2BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		630D60281D25B7AE0009D2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		630D602A1D25B7AE0009D2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6347A9D11D26C3D600CEAA5C /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		6347A9D31D26CA8700CEAA5C /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		6347A9D51D26D05400CEAA5C /* medButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = medButton.swift; sourceTree = "<group>"; };
+		6347A9D71D26EFEB00CEAA5C /* MedicationDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationDictionary.swift; sourceTree = "<group>"; };
+		6347A9D91D26F4E900CEAA5C /* Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,8 @@
 		635CAD6F1D25C6FD003ABCA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6347A9D11D26C3D600CEAA5C /* Medication.swift */,
+				6347A9D31D26CA8700CEAA5C /* Injection.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -74,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				630D60251D25B7AE0009D2BC /* Assets.xcassets */,
+				6347A9D51D26D05400CEAA5C /* medButton.swift */,
 				630D60271D25B7AE0009D2BC /* LaunchScreen.storyboard */,
 				630D60221D25B7AE0009D2BC /* Main.storyboard */,
 			);
@@ -99,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				630D601E1D25B7AE0009D2BC /* AppDelegate.swift */,
+				6347A9D91D26F4E900CEAA5C /* Setup.swift */,
+				6347A9D71D26EFEB00CEAA5C /* MedicationDictionary.swift */,
 				630D602A1D25B7AE0009D2BC /* Info.plist */,
 			);
 			name = "App Global";
@@ -175,7 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6347A9D81D26EFEB00CEAA5C /* MedicationDictionary.swift in Sources */,
 				630D60211D25B7AE0009D2BC /* ViewController.swift in Sources */,
+				6347A9D61D26D05400CEAA5C /* medButton.swift in Sources */,
+				6347A9D41D26CA8700CEAA5C /* Injection.swift in Sources */,
+				6347A9D21D26C3D600CEAA5C /* Medication.swift in Sources */,
+				6347A9DA1D26F4E900CEAA5C /* Setup.swift in Sources */,
 				630D601F1D25B7AE0009D2BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
