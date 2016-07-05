@@ -18,7 +18,6 @@ class MedicationController: UIViewController, Setup {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     func setupAppearance() {
@@ -30,19 +29,22 @@ class MedicationController: UIViewController, Setup {
     }
     
     func presentActionSheet() {
-        let actionSheet = UIAlertController(title: "Medication", message: "Add a Medication", preferredStyle: .Alert)
         
-        let medTextField = UITextField(coder: <#T##NSCoder#>)
+        let actionSheet = UIAlertController(title: "Add A Medication", message: nil, preferredStyle: .Alert)
         
         let addAction = UIAlertAction(title: "Add", style: .Default) {(action) in
-            print(action)
+            let med = actionSheet.textFields!.first!.text // add guard statement
+            print("add medicaiton \(med)")
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Destructive) {(action) in
-            print(action)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) {(action) in
+            print("cancel")
         }
         
-        actionSheet.addTextFieldWithConfigurationHandler(<#T##configurationHandler: ((UITextField) -> Void)?##((UITextField) -> Void)?##(UITextField) -> Void#>)
+        actionSheet.addTextFieldWithConfigurationHandler { (medTextField) in
+            //
+            medTextField.autocorrectionType = UITextAutocorrectionType.Yes
+        }
         actionSheet.addAction(addAction) // order?
         actionSheet.addAction(cancelAction)
         
