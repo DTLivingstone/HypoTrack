@@ -10,15 +10,19 @@ import UIKit
 
 struct Medication {
     let med: String
-    let dosages: [dosageType]?
-    let location: [locationType]?
-    let color: buttonColor
+    var dosages: [dosageType]?
+    var location: [locationType]?
+    let color: ButtonColorType
 }
 
-typealias dosageType = (Int, String) // i.e. 30mg
-typealias locationType = (String, String) // i.e. Left Arm
+typealias dosageType = (Float?, String)
+typealias locationType = (SideType, String)
 
-enum buttonColor {
+enum SideType {
+    case Left, Right, Center, Middle
+}
+
+enum ButtonColorType {
     
     case red, green, blue, orange, purple
     
