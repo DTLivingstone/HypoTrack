@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Medication Controller-->
+        <!--Medication View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MedicationViewController" id="BYZ-38-t0r" customClass="MedicationController" customModule="HypoTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedicationViewController" id="BYZ-38-t0r" customClass="MedicationViewController" customModule="HypoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1046.5" y="1167.5"/>
         </scene>
-        <!--DosageViewController-->
+        <!--DoseViewController-->
         <scene sceneID="XLZ-R3-mis">
             <objects>
-                <viewController storyboardIdentifier="DosageViewController" title="DosageViewController" id="2bB-XY-a8k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoseViewController" title="DoseViewController" id="2bB-XY-a8k" customClass="DoseViewController" customModule="HypoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fxn-1m-b5Z"/>
                         <viewControllerLayoutGuide type="bottom" id="4Q3-CS-IMM"/>
@@ -196,6 +196,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addDose:" destination="2bB-XY-a8k" eventType="touchUpInside" id="bMB-Cm-SoC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUZ-ch-f2d">
                                 <rect key="frame" x="231" y="569" width="90" height="90"/>
@@ -204,6 +207,9 @@
                                 <state key="normal" title="-">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeDose:" destination="2bB-XY-a8k" eventType="touchUpInside" id="WRV-kO-Rv8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,12 +218,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fx-Cb-4XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492.5" y="373.5"/>
+            <point key="canvasLocation" x="1494.5" y="373.5"/>
         </scene>
         <!--LocationViewController-->
         <scene sceneID="1I2-Kw-RlA">
             <objects>
-                <viewController restorationIdentifier="LocationViewController" title="LocationViewController" id="PaG-bw-aQT" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LocationViewController" title="LocationViewController" id="PaG-bw-aQT" customClass="LocationViewController" customModule="HypoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="trd-DO-kJi"/>
                         <viewControllerLayoutGuide type="bottom" id="GCp-od-wed"/>
@@ -233,6 +239,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addLocation:" destination="PaG-bw-aQT" eventType="touchUpInside" id="SrR-db-cjZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWS-F0-m29">
                                 <rect key="frame" x="20" y="168" width="335" height="88"/>
@@ -283,6 +292,9 @@
                                 <state key="normal" title="-">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeLocation:" destination="PaG-bw-aQT" eventType="touchUpInside" id="2In-uN-UFY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,12 +303,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmY-Pl-jQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938.5" y="373.5"/>
+            <point key="canvasLocation" x="1940.5" y="373.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Date View Controller-->
         <scene sceneID="j2O-cc-a6P">
             <objects>
-                <viewController id="HaQ-W1-t9H" sceneMemberID="viewController">
+                <viewController restorationIdentifier="DateViewController" id="HaQ-W1-t9H" customClass="DateViewController" customModule="HypoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h0z-CP-Ilp"/>
                         <viewControllerLayoutGuide type="bottom" id="0So-ny-I8B"/>
@@ -313,6 +325,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="now:" destination="HaQ-W1-t9H" eventType="touchUpInside" id="TQt-l5-tod"/>
                                     <segue destination="f9N-aA-lFN" kind="show" id="8tJ-zi-Xpt"/>
                                 </connections>
                             </button>
@@ -330,6 +343,9 @@
                                 <state key="normal" title="Select Time...">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="customTime:" destination="HaQ-W1-t9H" eventType="touchUpInside" id="2TA-zY-bWt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,12 +354,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATZ-hR-NBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2379.5" y="373.5"/>
+            <point key="canvasLocation" x="2369.5" y="373.5"/>
         </scene>
         <!--ConfirmationViewController-->
         <scene sceneID="5N0-Iv-f9F">
             <objects>
-                <viewController restorationIdentifier="ConfirmationViewController" title="ConfirmationViewController" id="f9N-aA-lFN" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ConfirmationViewController" title="ConfirmationViewController" id="f9N-aA-lFN" customClass="ConfirmationViewController" customModule="HypoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GE9-7Q-tPg"/>
                         <viewControllerLayoutGuide type="bottom" id="Jw0-Kc-ydZ"/>
@@ -366,6 +382,9 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirm:" destination="f9N-aA-lFN" eventType="touchUpInside" id="q71-0e-zwu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMg-K2-wez">
                                 <rect key="frame" x="20" y="391" width="335" height="88"/>
@@ -374,6 +393,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancel:" destination="f9N-aA-lFN" eventType="touchUpInside" id="k17-Ct-ANC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

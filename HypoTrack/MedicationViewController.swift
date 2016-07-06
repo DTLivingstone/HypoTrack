@@ -8,16 +8,12 @@
 
 import UIKit
 
-class MedicationController: UIViewController, Setup {
+class MedicationViewController: UIViewController, Setup {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
         setup()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func setupAppearance() {
@@ -35,9 +31,12 @@ class MedicationController: UIViewController, Setup {
         let addAction = UIAlertAction(title: "Add", style: .Default) { (action) in
             let med = actionSheet.textFields!.first!.text // add guard statement
             let color = buttonRandomizer(med!)
-            medications[med!] = Medication(med: med!, dosages: nil, location: nil, color: color)
             
-            print(medications[med!])
+            if medications[med!] == nil {
+                medications[med!] = Medication(med: med!, doses: nil, location: nil, color: color)
+                print(medications)
+            }
+            
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
@@ -60,8 +59,7 @@ class MedicationController: UIViewController, Setup {
     
     
     @IBAction func removeMed(sender: UIButton) {
-        print("remove")
+        print("remove med")
     }
-    
 }
 

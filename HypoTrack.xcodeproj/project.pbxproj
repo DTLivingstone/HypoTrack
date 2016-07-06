@@ -16,7 +16,7 @@
 		6347A9D41D26CA8700CEAA5C /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D31D26CA8700CEAA5C /* Injection.swift */; };
 		6347A9D81D26EFEB00CEAA5C /* MedicationDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D71D26EFEB00CEAA5C /* MedicationDictionary.swift */; };
 		6347A9DA1D26F4E900CEAA5C /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9D91D26F4E900CEAA5C /* Setup.swift */; };
-		6347A9DC1D27194D00CEAA5C /* DosageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9DB1D27194D00CEAA5C /* DosageViewController.swift */; };
+		6347A9DC1D27194D00CEAA5C /* DoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9DB1D27194D00CEAA5C /* DoseViewController.swift */; };
 		6347A9DE1D27197200CEAA5C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9DD1D27197200CEAA5C /* LocationViewController.swift */; };
 		6347A9E01D27198E00CEAA5C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */; };
 		6347A9E21D271A2700CEAA5C /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9E11D271A2700CEAA5C /* DateViewController.swift */; };
@@ -34,7 +34,7 @@
 		6347A9D31D26CA8700CEAA5C /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		6347A9D71D26EFEB00CEAA5C /* MedicationDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationDictionary.swift; sourceTree = "<group>"; };
 		6347A9D91D26F4E900CEAA5C /* Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
-		6347A9DB1D27194D00CEAA5C /* DosageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
+		6347A9DB1D27194D00CEAA5C /* DoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseViewController.swift; sourceTree = "<group>"; };
 		6347A9DD1D27197200CEAA5C /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		6347A9E11D271A2700CEAA5C /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
@@ -102,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				630D60201D25B7AE0009D2BC /* MedicationViewController.swift */,
-				6347A9DB1D27194D00CEAA5C /* DosageViewController.swift */,
+				6347A9DB1D27194D00CEAA5C /* DoseViewController.swift */,
 				6347A9DD1D27197200CEAA5C /* LocationViewController.swift */,
-				6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */,
 				6347A9E11D271A2700CEAA5C /* DateViewController.swift */,
+				6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 				6347A9DA1D26F4E900CEAA5C /* Setup.swift in Sources */,
 				6347A9DE1D27197200CEAA5C /* LocationViewController.swift in Sources */,
 				630D601F1D25B7AE0009D2BC /* AppDelegate.swift in Sources */,
-				6347A9DC1D27194D00CEAA5C /* DosageViewController.swift in Sources */,
+				6347A9DC1D27194D00CEAA5C /* DoseViewController.swift in Sources */,
 				6347A9E21D271A2700CEAA5C /* DateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

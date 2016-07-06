@@ -12,14 +12,16 @@ import UIKit
 
 var medications = [String: Medication]()
 
+//var currentMed: Medication{}
+
 struct Medication {
     let med: String
-    var dosages: [dosageType]?
+    var doses: [doseType]?
     var location: [locationType]?
     let color: ButtonColorType
 }
 
-typealias dosageType = (Float?, String)
+typealias doseType = (Float?, String)
 typealias locationType = (SideType, String)
 
 enum SideType {

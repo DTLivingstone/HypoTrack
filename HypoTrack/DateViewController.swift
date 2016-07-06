@@ -8,28 +8,28 @@
 
 import UIKit
 
-class DateViewController: UIViewController {
+class DateViewController: UIViewController, Setup {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setupAppearance()
+        setup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupAppearance() {
+        
     }
-    */
-
+    
+    func setup() {
+        self.navigationItem.title = "Medication"
+    }
+    
+    @IBAction func now(sender: UIButton) {
+        print(NSDate.init())
+    }
+    
+    @IBAction func customTime(sender: UIButton) {
+        print("custom time")
+    }
+    
 }

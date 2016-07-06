@@ -12,7 +12,7 @@ var injections = [Injection]()
 
 struct Injection {
     let med: String
-    let dosage: dosageType
+    let dose: doseType
     let location: locationType
     let date: NSDate
 }
