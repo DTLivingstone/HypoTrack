@@ -8,17 +8,12 @@
 
 import UIKit
 
-class MedicationController: UIViewController, Setup {
+class MedicationViewController: UIViewController, Setup {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
         setup()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
     func setupAppearance() {
@@ -26,27 +21,33 @@ class MedicationController: UIViewController, Setup {
     }
     
     func setup() {
-        self.navigationItem.title = "HypoTrack"
+        self.navigationItem.title = "Medication"
     }
     
     func presentActionSheet() {
-        let actionSheet = UIAlertController(title: "Medication", message: "Add a Medication", preferredStyle: .Alert)
         
-        let medTextField = UITextField(coder: <#T##NSCoder#>)
+        let actionSheet = UIAlertController(title: "Add A Medication", message: nil, preferredStyle: .Alert)
         
-        let addAction = UIAlertAction(title: "Add", style: .Default) {(action) in
-            print(action)
+        let addAction = UIAlertAction(title: "Add", style: .Default) { (action) in
+            let med = actionSheet.textFields!.first!.text // add guard statement
+            let color = buttonRandomizer(med!)
+            
+            if medications[med!] == nil {
+                medications[med!] = Medication(med: med!, doses: nil, location: nil, color: color)
+                print(medications)
+            }
+            
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Destructive) {(action) in
-            print(action)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            print("cancel")
         }
         
-        actionSheet.addTextFieldWithConfigurationHandler(<#T##configurationHandler: ((UITextField) -> Void)?##((UITextField) -> Void)?##(UITextField) -> Void#>)
+        actionSheet.addTextFieldWithConfigurationHandler { (medTextField) in
+            medTextField.autocorrectionType = UITextAutocorrectionType.Yes
+        }
         actionSheet.addAction(addAction) // order?
         actionSheet.addAction(cancelAction)
-        
-//        var preferredAction = addAction
         
         self.presentViewController(actionSheet, animated: true, completion: nil)
         
@@ -58,8 +59,7 @@ class MedicationController: UIViewController, Setup {
     
     
     @IBAction func removeMed(sender: UIButton) {
-        print("remove")
+        print("remove med")
     }
-    
 }
 

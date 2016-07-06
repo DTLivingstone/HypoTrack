@@ -8,43 +8,53 @@
 
 import UIKit
 
+// how can I encapuslate this?
+
+var medications = [String: Medication]()
+
+//var currentMed: Medication{}
+
 struct Medication {
     let med: String
-    var dosages: [dosageType]?
+    var doses: [doseType]?
     var location: [locationType]?
     let color: ButtonColorType
 }
 
-typealias dosageType = (Float?, String)
+typealias doseType = (Float?, String)
 typealias locationType = (SideType, String)
 
 enum SideType {
     case Left, Right, Center, Middle
 }
 
-enum ButtonColorType {
+enum ButtonColorType: Int {
+    case orange = 0, green, blue, lightBlue, purple
     
-    case red, green, blue, orange, purple
-    
-    func buttonColorObject() -> UIColor{
+    func buttonColorObject() -> UIColor {
         switch self {
-        case .red:
-            return UIColor(red: 1.0, green: 0.1, blue: 0.1, alpha: 1)
+        case .orange:
+            return UIColor(hue:0.112, saturation:0.793, brightness:0.964, alpha:1)
         
         case .green:
-            return UIColor(red: 0.1, green: 1.0, blue: 0.1, alpha: 1)
+            return UIColor(hue:0.221, saturation:0.701, brightness:0.792, alpha:1)
             
         case .blue :
-            return UIColor(red: 0.1, green: 0.1, blue: 1.0, alpha: 1)
+            return UIColor(hue:0.584, saturation:1, brightness:0.537, alpha:1)
             
-        case .orange:
-            return UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 1)
+        case .lightBlue:
+            return UIColor(hue:0.554, saturation:0.670, brightness:0.958, alpha:1)
             
         case .purple:
-            return UIColor(red: 1.0, green: 0.1, blue: 1.0, alpha: 1)
+            return UIColor(hue:0.272, saturation:0.776, brightness:0.595, alpha:1)
         }
-
     }
-    
 }
+
+func buttonRandomizer(med: String) -> ButtonColorType {
+    let shortHash = Int(CFHash(med) % 10 / 2)
+    
+    return ButtonColorType(rawValue: shortHash)!
+}
+
 

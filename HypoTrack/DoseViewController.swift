@@ -1,5 +1,5 @@
 //
-//  LocationViewController.swift
+//  DoseViewController.swift
 //  HypoTrack
 //
 //  Created by David Livingstone on 7/1/16.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LocationViewController: UIViewController, Setup {
-
+class DoseViewController: UIViewController, Setup {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
@@ -21,14 +21,14 @@ class LocationViewController: UIViewController, Setup {
     }
     
     func setup() {
-        self.navigationItem.title = "Location"
+        self.navigationItem.title = "Dose"
     }
     
-    @IBAction func addLocation(sender: UIButton) {
-        print("add location")
+    @IBAction func addDose(sender: UIButton) {
+        print("add dose")
     }
     
-    @IBAction func removeLocation(sender: UIButton) {
-        print("remove location")
+    @IBAction func removeDose(sender: UIButton) {
+        print("remove dose")
     }
 }
