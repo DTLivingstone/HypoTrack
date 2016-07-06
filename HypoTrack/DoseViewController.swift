@@ -8,7 +8,9 @@
 
 import UIKit
 
-class DoseViewController: UIViewController, Setup {
+class DoseViewController: UIViewController,Setup {
+    
+    @IBOutlet weak var doseHeader: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class DoseViewController: UIViewController, Setup {
     
     func setup() {
         self.navigationItem.title = "Dose"
+        doseHeader.text = "Chemical X"
     }
     
     @IBAction func addDose(sender: UIButton) {
