@@ -9,16 +9,16 @@
 import Foundation
 
 let medicationDictionary = [
-    "Actimmune",
-    "Adalimumab",
-    "Apokyn",
+    "Actimmune", // green
+    "Adalimumab", // purple
+    "Apokyn", // orange
     "Arixtra",
-    "Avonex",
+    "Avonex", // blue
     "Betaseron",
     "Bravelle",
     "Byetta",
     "Calcitonin",
-    "Caverject",
+    "Caverject", // lightBlue
     "Cetrotide",
     "Gonadotropin",
     "Cimzia",

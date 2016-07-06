@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct Injection { // make sure to give this a failable initilializer because the user might not finish
-    let med: Medication
+var injections = [Injection]()
+
+struct Injection {
+    let med: String
     let dosage: dosageType
     let location: locationType
     let date: NSDate

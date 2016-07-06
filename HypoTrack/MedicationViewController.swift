@@ -25,30 +25,30 @@ class MedicationController: UIViewController, Setup {
     }
     
     func setup() {
-        self.navigationItem.title = "HypoTrack"
+        self.navigationItem.title = "Medication"
     }
     
     func presentActionSheet() {
         
         let actionSheet = UIAlertController(title: "Add A Medication", message: nil, preferredStyle: .Alert)
         
-        let addAction = UIAlertAction(title: "Add", style: .Default) {(action) in
+        let addAction = UIAlertAction(title: "Add", style: .Default) { (action) in
             let med = actionSheet.textFields!.first!.text // add guard statement
-            print("add medicaiton \(med)")
+            let color = buttonRandomizer(med!)
+            medications[med!] = Medication(med: med!, dosages: nil, location: nil, color: color)
+            
+            print(medications[med!])
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) {(action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
             print("cancel")
         }
         
         actionSheet.addTextFieldWithConfigurationHandler { (medTextField) in
-            //
             medTextField.autocorrectionType = UITextAutocorrectionType.Yes
         }
         actionSheet.addAction(addAction) // order?
         actionSheet.addAction(cancelAction)
-        
-//        var preferredAction = addAction
         
         self.presentViewController(actionSheet, animated: true, completion: nil)
         

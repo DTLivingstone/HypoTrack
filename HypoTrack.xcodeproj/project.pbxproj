@@ -20,7 +20,6 @@
 		6347A9DE1D27197200CEAA5C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9DD1D27197200CEAA5C /* LocationViewController.swift */; };
 		6347A9E01D27198E00CEAA5C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */; };
 		6347A9E21D271A2700CEAA5C /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347A9E11D271A2700CEAA5C /* DateViewController.swift */; };
-		63F956A81D2C1925008B4BC7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F956A71D2C1925008B4BC7 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		6347A9DD1D27197200CEAA5C /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		6347A9E11D271A2700CEAA5C /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
-		63F956A71D2C1925008B4BC7 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 			children = (
 				6347A9D11D26C3D600CEAA5C /* Medication.swift */,
 				6347A9D31D26CA8700CEAA5C /* Injection.swift */,
-				63F956A71D2C1925008B4BC7 /* History.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -205,7 +202,6 @@
 				6347A9D81D26EFEB00CEAA5C /* MedicationDictionary.swift in Sources */,
 				630D60211D25B7AE0009D2BC /* MedicationViewController.swift in Sources */,
 				6347A9D41D26CA8700CEAA5C /* Injection.swift in Sources */,
-				63F956A81D2C1925008B4BC7 /* History.swift in Sources */,
 				6347A9E01D27198E00CEAA5C /* ConfirmationViewController.swift in Sources */,
 				6347A9D21D26C3D600CEAA5C /* Medication.swift in Sources */,
 				6347A9DA1D26F4E900CEAA5C /* Setup.swift in Sources */,

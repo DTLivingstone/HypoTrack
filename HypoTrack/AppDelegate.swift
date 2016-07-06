@@ -17,9 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         if UITextChecker.hasLearnedWord("Medroxyprogesterone") == false { // this should only run on first launch
+            print("loading dictionary")
             for word in medicationDictionary {
                 UITextChecker.learnWord(word)
             }
+        } else {
+            print("dicitonary already loaded")
         }
         
         return true
