@@ -13,6 +13,7 @@ class DatePickerViewController: UIViewController, Setup {
     
     @IBOutlet weak var DatePickerLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +30,10 @@ class DatePickerViewController: UIViewController, Setup {
     func setupAppearance() {
         
     }
+    
+    @IBAction func pickDate(sender: UIButton) {
+        print(self.datePicker.date)
+    }
+    
     
 }
