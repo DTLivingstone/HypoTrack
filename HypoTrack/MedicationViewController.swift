@@ -8,8 +8,6 @@
 
 import UIKit
 
-// protocol here?
-
 class MedicationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, Setup {
     
     @IBOutlet weak var collection: UICollectionView!
@@ -41,15 +39,19 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     func configureCellForIndexPath(indexPath: NSIndexPath) -> ButtonCollectionViewCell {
         let buttonCell = self.collection.dequeueReusableCellWithReuseIdentifier(ButtonCollectionViewCell.identifier(), forIndexPath: indexPath) as! ButtonCollectionViewCell
         
-//        buttonCell.button.setTitle("Test Button", forState: normal)
+        // customize buttons here, based on indexPath
+        
+        buttonCell.button.setTitle("ProtoButton", forState: .Normal)
+        buttonCell.button.setTitleColor(UIColor(hue:0.221, saturation:0.701, brightness:0.792, alpha:1), forState: .Normal)
         
         return buttonCell
     }
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // return number of buttons
-        return 1
+        // calculate number of buttons
+        
+        return 4
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -58,6 +60,9 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         // if in normal mode, add med to current injection
+        
+        print("Button!")
+        
         // if in delete mode, delete medication
     }
     
