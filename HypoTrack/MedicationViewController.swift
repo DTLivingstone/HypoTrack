@@ -8,7 +8,19 @@
 
 import UIKit
 
-class MedicationViewController: UIViewController, Setup {
+class MedicationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, Setup {
+    
+    
+    @IBOutlet weak var collection: UICollectionView!
+    
+    func setupCollectionView() {
+        self.collection.collectionViewLayout = ButtonCustomLayout()
+    }
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +35,18 @@ class MedicationViewController: UIViewController, Setup {
     func setup() {
         self.navigationItem.title = "Medication"
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func presentActionSheet() {
         
