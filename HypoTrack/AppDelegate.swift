@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let themeColor = UIColor(hue:0.806, saturation:0.659, brightness:0.602, alpha:1)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -25,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("dicitonary already loaded")
         }
         
+        return true
+    }
+    
+    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        window?.tintColor = themeColor
         return true
     }
 

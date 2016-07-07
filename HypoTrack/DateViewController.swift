@@ -9,6 +9,8 @@
 import UIKit
 
 class DateViewController: UIViewController, Setup {
+    
+    @IBOutlet weak var dateHeader: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,8 @@ class DateViewController: UIViewController, Setup {
     }
     
     func setup() {
-        self.navigationItem.title = "Medication"
+        self.navigationItem.title = "Time"
+        dateHeader.text = "Chemical X 30mg Left Arm" // need this on 2 lines
     }
     
     @IBAction func now(sender: UIButton) {
@@ -31,5 +34,4 @@ class DateViewController: UIViewController, Setup {
     @IBAction func customTime(sender: UIButton) {
         print("custom time")
     }
-    
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 class LocationViewController: UIViewController, Setup {
+    
+    @IBOutlet weak var locationHeader: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class LocationViewController: UIViewController, Setup {
     
     func setup() {
         self.navigationItem.title = "Location"
+        locationHeader.text = "Chemical X 30mg"
     }
     
     @IBAction func addLocation(sender: UIButton) {
