@@ -8,19 +8,11 @@
 
 import UIKit
 
+// protocol here?
+
 class MedicationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, Setup {
     
-    
     @IBOutlet weak var collection: UICollectionView!
-    
-    func setupCollectionView() {
-        self.collection.collectionViewLayout = ButtonCustomLayout()
-    }
-    
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +28,38 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
         self.navigationItem.title = "Medication"
     }
     
+    // Collection View
+    
+    func setupCollectionView() {
+        self.collection.collectionViewLayout = ButtonCustomLayout()
+    }
+    
+    class func identifier() -> String {
+        return "MedicationViewController"
+    }
+    
+    func configureCellForIndexPath(indexPath: NSIndexPath) -> ButtonCollectionViewCell {
+        let buttonCell = self.collection.dequeueReusableCellWithReuseIdentifier(ButtonCollectionViewCell.identifier(), forIndexPath: indexPath) as! ButtonCollectionViewCell
+        
+//        buttonCell.button.setTitle("Test Button", forState: normal)
+        
+        return buttonCell
+    }
     
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // return number of buttons
+        return 1
+    }
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        return self.configureCellForIndexPath(indexPath)
+    }
     
-    
-    
-    
-    
-    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        // if in normal mode, add med to current injection
+        // if in delete mode, delete medication
+    }
     
     
     
