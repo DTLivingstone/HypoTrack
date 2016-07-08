@@ -24,11 +24,13 @@ class DateViewController: UIViewController, Setup {
     
     func setup() {
         self.navigationItem.title = "Time"
-        dateHeader.text = "Chemical X 30mg Left Arm" // need this on 2 lines
+        dateHeader.text = "\(thisInjection.med), \(thisInjection.dose!), \(thisInjection.location!)"
     }
     
     @IBAction func now(sender: UIButton) {
         print(NSDate.init())
+        
+        thisInjection.date = NSDate.init()
     }
     
     @IBAction func customTime(sender: UIButton) {

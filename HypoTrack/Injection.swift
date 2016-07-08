@@ -10,16 +10,19 @@ import Foundation
 
 var injections = [Injection]()
 
+var thisInjection = Injection(med: "")
+
 struct Injection {
-    let med: String
-    let dose: doseType
-    let location: locationType
-    let date: NSDate
+    var med: String
+    var dose: String?
+    var location: String?
+    var date: NSDate?
     
-    typealias doseType = (Float?, String)
-    typealias locationType = (SideType, String)
-    
-    enum SideType {
-        case Left, Right, Center, Middle
+    init(med: String) {
+        self.med = med
+        self.dose = nil
+        self.location = nil
+        self.date = nil
+        
     }
 }

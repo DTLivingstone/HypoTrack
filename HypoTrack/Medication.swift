@@ -8,34 +8,30 @@
 
 import UIKit
 
-var medications = [String: Medication]()
+//var medications = [String: Medication]()
 
 struct Medication {
     let med: String
-    var doses: [doseType]?
-    var location: [locationType]?
+    var doses: [String]
+    var location: [locationType]
     let color: ButtonColorType
     
-    init?(med: String) {
+    init(med: String) {
         self.med = med
-        self.doses = nil
-        self.location = nil
+        self.doses = []
+        self.location = []
         self.color = ButtonColorType(rawValue: Int(CFHash(med) % 10 / 2))!
         
-        if medications[med] == nil {
-            medications[med] = self
-            print(medications[med])
+        if MedicationData.shared.medications[med] == nil {
+            MedicationData.shared.medications[med] = self
+            print(MedicationData.shared.medications[med])
         }
     }
     
     // update medications array in NSKeyedArchiver
-    
-    typealias doseType = (Float?, String)
-    typealias locationType = (SideType, String)
-    
-    enum SideType {
-        case Left, Right, Center, Middle
-    }
+
+    typealias doseType = String
+    typealias locationType = String
     
     enum ButtonColorType: Int {
         case orange = 0, green, blue, lightBlue, purple

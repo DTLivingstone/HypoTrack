@@ -12,8 +12,6 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBOutlet weak var collection: UICollectionView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
@@ -41,33 +39,22 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     func configureCellForIndexPath(indexPath: NSIndexPath) -> ButtonCollectionViewCell {
         let buttonCell = self.collection.dequeueReusableCellWithReuseIdentifier(ButtonCollectionViewCell.identifier(), forIndexPath: indexPath) as! ButtonCollectionViewCell
         
-        let medArray = [String](medications.keys)
+        let medArray = [String](MedicationData.shared.medications.keys)
         
         buttonCell.button.setTitle(medArray[indexPath.row], forState: .Normal)
-        buttonCell.button.setTitleColor(medications[medArray[indexPath.row]]!.color.buttonColorObject(), forState: .Normal)
+        buttonCell.button.setTitleColor(MedicationData.shared.medications[medArray[indexPath.row]]!.color.buttonColorObject(), forState: .Normal)
         
         return buttonCell
     }
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return medications.count
+        return MedicationData.shared.medications.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         return self.configureCellForIndexPath(indexPath)
     }
-    
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        // if in normal mode, add med to current injection
-        
-        print("Button!")
-        
-        // if in delete mode, delete medication
-    }
-    
-    
-    
     
     func presentActionSheet() {
         
@@ -89,7 +76,7 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
         actionSheet.addTextFieldWithConfigurationHandler { (medTextField) in
             medTextField.autocorrectionType = UITextAutocorrectionType.Yes
         }
-        actionSheet.addAction(addAction) // order?
+        actionSheet.addAction(addAction)
         actionSheet.addAction(cancelAction)
         
         self.presentViewController(actionSheet, animated: true, completion: nil)
@@ -103,6 +90,13 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBAction func removeMed(sender: UIButton) {
         print("remove med")
+    }
+    
+    @IBAction func selectMed(sender: UIButton) {
+        if let med = sender.titleLabel!.text {
+            thisInjection.med = med
+            print(thisInjection)
+        }
     }
 }
 
