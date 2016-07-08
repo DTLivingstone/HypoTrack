@@ -24,7 +24,7 @@ class DatePickerViewController: UIViewController, Setup {
 
     func setup() {
         self.navigationItem.title = "Select Time"
-        self.DatePickerLabel.text = "\(thisInjection.med), \(thisInjection.dose!), \(thisInjection.location!)"
+        self.DatePickerLabel.text = "\(thisInjection.med), \(thisInjection.dose!), \n \(thisInjection.location!)"
     }
     
     func setupAppearance() {

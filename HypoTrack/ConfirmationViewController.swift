@@ -24,10 +24,22 @@ class ConfirmationViewController: UIViewController, Setup {
     
     func setup() {
         self.navigationItem.title = "Confirmation"
-        confirmationHeader.text = "Chemical X 30mg Left Arm 9:53 AM Today" // need this to be on 3 lines
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .NoStyle
+        formatter.locale = NSLocale(localeIdentifier: "en_US")
+        
+        let formattedDate = formatter.stringFromDate(thisInjection.date!)
+        print(thisInjection.date!)
+        print(formattedDate)
+        
+        confirmationHeader.text = "\(thisInjection.med), \(thisInjection.dose!), \n \(thisInjection.location!) on \(formattedDate)"
     }
     
     @IBAction func confirm(sender: UIButton) {
         print("confirm")
+        injections.append(thisInjection)
+        print(injections)
     }
 }

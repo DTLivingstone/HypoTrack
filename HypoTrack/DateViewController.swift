@@ -24,7 +24,7 @@ class DateViewController: UIViewController, Setup {
     
     func setup() {
         self.navigationItem.title = "Time"
-        dateHeader.text = "\(thisInjection.med), \(thisInjection.dose!), \(thisInjection.location!)"
+        dateHeader.text = "\(thisInjection.med), \(thisInjection.dose!), \n \(thisInjection.location!)"
     }
     
     @IBAction func now(sender: UIButton) {
