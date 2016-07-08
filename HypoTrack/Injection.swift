@@ -15,4 +15,11 @@ struct Injection {
     let dose: doseType
     let location: locationType
     let date: NSDate
+    
+    typealias doseType = (Float?, String)
+    typealias locationType = (SideType, String)
+    
+    enum SideType {
+        case Left, Right, Center, Middle
+    }
 }

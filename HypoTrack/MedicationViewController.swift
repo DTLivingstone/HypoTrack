@@ -12,6 +12,8 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBOutlet weak var collection: UICollectionView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAppearance()
@@ -39,21 +41,19 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
     func configureCellForIndexPath(indexPath: NSIndexPath) -> ButtonCollectionViewCell {
         let buttonCell = self.collection.dequeueReusableCellWithReuseIdentifier(ButtonCollectionViewCell.identifier(), forIndexPath: indexPath) as! ButtonCollectionViewCell
         
-        // customize buttons here, based on indexPath
+        let medArray = [String](medications.keys)
         
-        buttonCell.button.setTitle("ProtoButton", forState: .Normal)
-        buttonCell.button.setTitleColor(UIColor(hue:0.221, saturation:0.701, brightness:0.792, alpha:1), forState: .Normal)
+        buttonCell.button.setTitle(medArray[indexPath.row], forState: .Normal)
+        buttonCell.button.setTitleColor(medications[medArray[indexPath.row]]!.color.buttonColorObject(), forState: .Normal)
         
         return buttonCell
     }
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // calculate number of buttons
-        
-        return 4
+        return medications.count
     }
-
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         return self.configureCellForIndexPath(indexPath)
     }
@@ -74,14 +74,12 @@ class MedicationViewController: UIViewController, UICollectionViewDataSource, UI
         let actionSheet = UIAlertController(title: "Add A Medication", message: nil, preferredStyle: .Alert)
         
         let addAction = UIAlertAction(title: "Add", style: .Default) { (action) in
-            let med = actionSheet.textFields!.first!.text // add guard statement
-            let color = buttonRandomizer(med!)
             
-            if medications[med!] == nil {
-                medications[med!] = Medication(med: med!, doses: nil, location: nil, color: color)
-                print(medications)
-            }
+            let med = actionSheet.textFields!.first!.text
             
+            Medication.init(med: med!)
+                        
+            self.collection.reloadData()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
