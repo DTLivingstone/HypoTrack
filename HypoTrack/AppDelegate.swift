@@ -31,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         window?.tintColor = themeColor
+        
+        // pull medications array out of NSKeyedArchiver
+        // pull injections array out of NSKeyedArchiver
+        
         return true
     }
 

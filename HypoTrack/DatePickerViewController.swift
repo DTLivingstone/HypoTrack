@@ -24,7 +24,7 @@ class DatePickerViewController: UIViewController, Setup {
 
     func setup() {
         self.navigationItem.title = "Select Time"
-        self.DatePickerLabel.text = "Chemical X 30mg Left Arm" // need this on 2 lines
+        self.DatePickerLabel.text = "\(thisInjection.med), \(thisInjection.dose!), \n \(thisInjection.location!)"
     }
     
     func setupAppearance() {
@@ -33,6 +33,7 @@ class DatePickerViewController: UIViewController, Setup {
     
     @IBAction func pickDate(sender: UIButton) {
         print(self.datePicker.date)
+        thisInjection.date = self.datePicker.date
     }
     
     
