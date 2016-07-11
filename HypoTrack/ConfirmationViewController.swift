@@ -27,7 +27,7 @@ class ConfirmationViewController: UIViewController, Setup {
         
         let formatter = NSDateFormatter()
         formatter.dateStyle = .MediumStyle
-        formatter.timeStyle = .NoStyle
+        formatter.timeStyle = .ShortStyle
         formatter.locale = NSLocale(localeIdentifier: "en_US")
         
         let formattedDate = formatter.stringFromDate(thisInjection.date!)
@@ -38,8 +38,6 @@ class ConfirmationViewController: UIViewController, Setup {
     }
     
     @IBAction func confirm(sender: UIButton) {
-        print("confirm")
         injections.append(thisInjection)
-        print(injections)
     }
 }

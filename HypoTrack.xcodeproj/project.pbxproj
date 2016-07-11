@@ -154,11 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				630C067C1D2E0656005E74E3 /* Medication */,
+				6340E6A11D2FFDA4004F37BC /* HistoryViewController.swift */,
 				630C067D1D2E0674005E74E3 /* Dose */,
 				630C067E1D2E068D005E74E3 /* Location */,
 				630C067F1D2E06B0005E74E3 /* Date */,
 				6347A9DF1D27198E00CEAA5C /* ConfirmationViewController.swift */,
-				6340E6A11D2FFDA4004F37BC /* HistoryViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
